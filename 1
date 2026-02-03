@@ -1,0 +1,46 @@
+time="2026-02-02T14:43:58+05:00" level=warning msg="/Users/rootix/Desktop/portfolio/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2026-02-02T14:43:58+05:00" level=warning msg="/Users/rootix/Desktop/portfolio/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+Dockerfile.backend:9
+
+--------------------
+
+   7 |     
+
+   8 |     COPY . ./
+
+   9 | >>> RUN go mod tidy
+
+  10 |     RUN CGO_ENABLED=0 GOOS=linux go build -o /bin/server ./cmd/server
+
+  11 |     
+
+--------------------
+
+target backend: failed to solve: process "/bin/sh -c go mod tidy" did not complete successfully: exit code: 1
+
+
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/rnf1fteag8q7dff7vb8sw41le
+
+Dockerfile.backend:9
+
+--------------------
+
+   7 |     
+
+   8 |     COPY . ./
+
+   9 | >>> RUN go mod tidy
+
+  10 |     RUN CGO_ENABLED=0 GOOS=linux go build -o /bin/server ./cmd/server
+
+  11 |     
+
+--------------------
+
+target backend: failed to solve: process "/bin/sh -c go mod tidy" did not complete successfully: exit code: 1
+
+
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/rnf1fteag8q7dff7vb8sw41le
+

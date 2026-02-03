@@ -1,0 +1,22 @@
+package handlers
+
+import (
+	"encoding/json"
+	"net/http"
+)
+
+type errorResponse struct {
+	Error string `json:"error"`
+}
+
+func writeJSON(w http.ResponseWriter, status int, payload any) {
+	w.WriteHeader(status)
+	if payload == nil {
+		return
+	}
+	_ = json.NewEncoder(w).Encode(payload)
+}
+
+func writeError(w http.ResponseWriter, status int, message string) {
+	writeJSON(w, status, errorResponse{Error: message})
+}
